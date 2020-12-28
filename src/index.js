@@ -1,12 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Res from "./components/Res";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
+import Example from "./components/Example";
+import mainHomePageRes from "./components/mainHomePageRes";
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+
+    <Example/>
+
+    <mainHomePageRes/>
+
+      <BrowserRouter>
+          <Route path="/partners" component={Res}></Route>
+          <Route path="/main" component={mainHomePageRes}></Route>
+      </BrowserRouter>
+
+
+
+
+  {/*<SectionTwo/>*/}
+
+      {/*<MediaQuery/>*/}
+
+      {/*<Res></Res>*/}
+
+
   </React.StrictMode>,
   document.getElementById('root')
 );
